@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="5dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header: Period + Subject -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvAttendancePeriod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Period 1"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvAttendanceSubject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mathematics"
+                    android:textColor="@color/textSecondary"
+                    android:textSize="14sp"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvAttendanceTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9:00 AM"
+                android:textColor="@color/textSecondary"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Attendance Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="3"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/btnPresent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:text="Present"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/success"
+                android:background="@drawable/bg_rounded_button"
+                android:elevation="2dp"
+                android:textStyle="bold"
+                android:layout_marginEnd="6dp" />
+
+            <Button
+                android:id="@+id/btnAbsent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:text="Absent"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/destructive"
+                android:background="@drawable/bg_rounded_button"
+                android:elevation="2dp"
+                android:textStyle="bold"
+                android:layout_marginEnd="6dp" />
+
+            <Button
+                android:id="@+id/btnCancelled"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:text="Cancelled"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/cancelled"
+                android:background="@drawable/bg_rounded_button"
+                android:elevation="2dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- ✅ Status Display -->
+        <TextView
+            android:id="@+id/tvStatusMarked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not Marked"
+            android:textSize="13sp"
+            android:textStyle="italic"
+            android:textColor="@color/textSecondary"
+            android:layout_marginTop="8dp"
+            android:visibility="gone" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

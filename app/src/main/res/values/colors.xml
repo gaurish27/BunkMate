@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_purple">#EDE7F6</color>
+    <color name="gray">#757575</color>
+    <color name="orange_red">#FF5722</color> <!-- Warm orange/red -->
+    <color name="orange_yellow">#FF9800</color>
+    <color name="yellow">#FFC107</color>
+    <color name="orange">#FF9800</color>
+    <color name="reddish_orange">#FF5722</color>
+    <!-- 🌈 Core Theme Colors -->
+    <color name="primary">#FF5722</color>          <!-- Vibrant orange -->
+    <color name="primary_glow">#FFC107</color>     <!-- Amber-yellow -->
+    <color name="primary_light">#FFF8E1</color>    <!-- Soft creamy white -->
+    <color name="background">#FFF9F6</color> <!-- Soft off-white background -->
+    <color name="card_background">#FFFFFF</color> <!-- Clean white for cards -->
+    <color name="border">#E0E0E0</color> <!-- Light grey for subtle dividers -->
+
+    <!-- 🧭 Text Colors -->
+    <color name="textPrimary">#212121</color> <!-- Almost black -->
+    <color name="textSecondary">#757575</color> <!-- Muted grey -->
+    <color name="textAccent">@color/primary</color> <!-- Orange accent for highlights -->
+
+    <!-- 🟢 Status Colors (for attendance indication) -->
+    <color name="safe_green">#4CAF50</color> <!-- ≥ 75% Safe -->
+    <color name="warning_yellow">#FFC107</color> <!-- 65–74% Warning -->
+    <color name="danger_red">#F44336</color> <!-- < 65% Danger -->
+
+    <!-- ⚙️ Misc Colors -->
+    <color name="gray_light">#F5F5F5</color>
+    <color name="gray_medium">#BDBDBD</color>
+
+    <color name="success">#A5D6A7</color>      <!-- light green -->
+    <color name="destructive">#EF9A9A</color>  <!-- light red -->
+    <color name="cancelled">#E0E0E0</color>    <!-- light gray -->
+
+    <!-- 🔵 Progress Bar -->
+    <color name="progress_active">@color/primary</color>
+    <color name="progress_track">#FFE0B2</color> <!-- Faded orange background -->
+</resources>

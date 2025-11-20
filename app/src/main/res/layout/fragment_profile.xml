@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".fragment.ProfileFragment">
+
+    <!-- Header with Gradient Background -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/bg_header_gradient">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/profile"
+            app:civ_border_color="@android:color/white"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Gaurish Jariwala"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="gaurishj@gmail.com"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <!-- Scrollable Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Section: Profile -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textColor="@color/orange_red"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"/>
+
+            <Button
+                android:id="@+id/btnEditProfile"
+                style="@style/ModernButtonStyle"
+                android:drawableStart="@drawable/profile"
+                android:text="Edit Profile"/>
+
+            <!-- Section: Manage -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Manage"
+                android:textColor="@color/orange_red"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"/>
+
+            <Button
+                android:id="@+id/btnMyOrders"
+                style="@style/ModernButtonStyle"
+                android:drawableStart="@drawable/faq_icon"
+                android:text="My Attendence"/>
+
+            <Button
+                android:id="@+id/btnContactUs"
+                style="@style/ModernButtonStyle"
+                android:drawableStart="@drawable/contactus"
+                android:text="Contact Us"/>
+
+            <Button
+                android:id="@+id/btnAboutUs"
+                style="@style/ModernButtonStyle"
+                android:drawableStart="@drawable/aboutus"
+                android:text="About Us"/>
+
+            <Button
+                android:id="@+id/btnLogout"
+                style="@style/ModernButtonStyle"
+                android:drawableStart="@drawable/logout"
+                android:text="Logout"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
