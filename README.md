@@ -67,6 +67,10 @@ Where:
 5. Check **Home Fragment** for subject stats and monthly safe bunks.
 
 ---
+## 🧭 Screenshots
+
+
+---
 
 ## 🧩 Future Enhancements
 
@@ -79,8 +83,7 @@ Where:
 
 ## 👨‍💻 Author
 
-**Gaurish Jariwala**  
-📧 [email@example.com]  
+**Gaurish Jariwala, Ayush Lakhani, Manasa Hegde**    
 💻 Developed as part of MCA Project  
 🏫 Jain University
 
