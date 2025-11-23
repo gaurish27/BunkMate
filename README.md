@@ -1,96 +1,115 @@
 # 📚 BunkMate — Smart Attendance & Timetable Manager
 
-**BunkMate** is an Android application designed for students to efficiently manage their class attendance, weekly timetables, and safe bunks.  
-It helps users keep track of attendance percentages, calculate safe bunks dynamically based on their timetable, and mark attendance easily for daily classes.
+**BunkMate** is an Android application designed for students to efficiently monitor their class attendance, manage weekly timetables, and calculate safe bunks intelligently.  
+It helps track attendance percentages, automatically determines how many lectures a student can safely skip, and offers a clean UI to mark daily attendance.
 
 ---
 
 ## 🚀 Features
 
 - 📅 **Weekly Timetable Management** — Add, edit, or remove class periods for each weekday.
-- 🧑‍🏫 **Attendance Tracker** — Mark attendance as *Present*, *Absent*, or *Cancelled* with one tap.
-- 📊 **Smart Safe Bunk Calculation** — Calculates monthly safe bunks per subject based on:
+- 🧑‍🏫 **Easy Attendance Marking** — Present, Absent, Cancelled with one tap.
+- 📊 **Smart Safe Bunk Calculation**  
+  Based on:
   - Minimum required attendance %
-  - Current attendance record
-  - Weekly class frequency
-- 📈 **Performance Dashboard** — View subject-wise progress with percentage indicators.
-- 🔒 **Local Database (SQLite)** — Works completely offline.
-- 👤 **User Registration & Auto Login** — Simple local user management using SharedPreferences.
+  - Current attendance record  
+  - Weekly class frequency  
+- 📈 **Subject Dashboard** — Displays percentages, safe bunks & progress.
+- 🔒 **Works Fully Offline** — Powered by SQLite local DB.
+- 👤 **User Registration & Auto Login** — Managed with SharedPreferences.
 
 ---
 
 ## 🛠️ Tech Stack
 
 | Component | Technology |
-|------------|-------------|
-| **Frontend (UI)** | XML layouts, Material Components |
-| **Backend (Local)** | SQLite with custom DAOs |
-| **Architecture** | MVC (Model–View–Controller) |
-| **Language** | Java |
-| **IDE** | Android Studio |
+|----------|------------|
+| UI | XML + Material Components |
+| Local Database | SQLite |
+| Architecture | MVC |
+| Language | Java |
+| IDE | Android Studio |
 
 ---
 
----
+## 💾 Database Schema
 
-## 💾 Database Schema (SQLite)
-
-- **users** — Stores user credentials  
-- **subjects** — Subject details (name, min % required, etc.)  
-- **timetable** — Weekly class schedule  
-- **attendance** — Daily attendance logs (linked to subjects)
+- **users** — User authentication  
+- **subjects** — Subject details  
+- **timetable** — Weekly timetable structure  
+- **attendance** — Daily logs for each class  
 
 ---
 
-## 🧮 Safe Bunk Calculation
-
-Safe bunks per month are calculated dynamically using the formula:
+## 🧮 Safe Bunk Formula
 
 \[
 \text{Safe Bunks} = \text{floor}\left(\frac{(A + M) \times 100}{R} - (T + M)\right)
 \]
 
-Where:
-- `A` = Attended classes  
-- `T` = Total classes  
-- `R` = Required attendance %  
-- `M` = Weekly classes × 4 (approx. per month)
+Where:  
+- **A** = Attended  
+- **T** = Total  
+- **R** = Required %  
+- **M** = (Weekly classes × 4 weeks)
 
 ---
 
 ## 🧭 Usage Guide
 
-1. Register a new account or auto-login.
-2. Add subjects with minimum required attendance %.
-3. Create a weekly timetable with periods per day.
-4. Mark attendance daily via the **Event Fragment**.
-5. Check **Home Fragment** for subject stats and monthly safe bunks.
+1. Register a user or auto-login.
+2. Add subjects & required attendance.
+3. Create timetable for each weekday.
+4. Mark attendance daily (Present/Absent/Cancelled).
+5. Check dashboard to see safe bunks & progress.
 
 ---
-## 🧭 Screenshots
 
+## 🖼️ Screenshots
+
+### 🔐 Login & Register  
+<table>
+<tr>
+<td><img src="https://github.com/user-attachments/assets/9d21c12e-e2c2-45cd-bdf2-3390e6e3a264" width="280"></td>
+<td><img src="https://github.com/user-attachments/assets/08a9d271-bad2-4e64-8efd-7fcd26297d01" width="280"></td>
+</tr>
+</table>
+
+### 🏠 Home & Attendance  
+<table>
+<tr>
+<td><img src="https://github.com/user-attachments/assets/9d080f11-c2f4-466f-8c8c-c30de4c20975" width="280"></td>
+<td><img src="https://github.com/user-attachments/assets/96101475-c8bd-4bfa-b485-1bd4a49e1b40" width="280"></td>
+</tr>
+</table>
+
+### 👤 Profile & Timetable  
+<table>
+<tr>
+<td><img src="https://github.com/user-attachments/assets/6a5d5275-6b06-416f-9504-39b591475d2e" width="280"></td>
+<td><img src="https://github.com/user-attachments/assets/224de95f-6092-4f0e-94ca-a0ee3b795b27" width="280"></td>
+</tr>
+</table>
 
 ---
 
 ## 🧩 Future Enhancements
 
-- Cloud backup for attendance data  
+- Cloud backup  
 - Dark mode  
-- Subject-wise analytics charts  
-- Semester summary export (PDF/CSV)
+- Subject analytics charts  
+- Export attendance summary (PDF/CSV)
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 Authors
 
-**Gaurish Jariwala, Ayush Lakhani, Manasa Hegde**    
-💻 Developed as part of MCA Project  
-🏫 Jain University
+**Gaurish Jariwala**  
+**Ayush Lakhani**  
+**Manasa Hegde**  
+📚 MCA Project — Jain University  
 
 ---
 
-## 🪪 License
-
-This project is open-source and licensed under the [MIT License](LICENSE).
-
-
+## 🪪 License  
+This project is licensed under the **MIT License**.
